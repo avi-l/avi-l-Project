@@ -5,9 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/lotr-task/",
   build: {
-    outDir: "dist",
-    rollupOptions: {
-      input: "public/index.html",
-    },
+    outDir: "docs",
   },
 });
