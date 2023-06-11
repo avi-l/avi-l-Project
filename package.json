@@ -6,7 +6,8 @@
   "homepage": "https://avi-l.github.io/lotr-task/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-assets.js",
+    "serve": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

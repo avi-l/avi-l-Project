@@ -64,7 +64,7 @@ Error generating stack: `+i.message+`
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */function Kw(e){let{basename:t,children:n,window:r}=e,o=w.useRef();o.current==null&&(o.current=uw({window:r,v5Compat:!0}));let i=o.current,[l,s]=w.useState({action:i.action,location:i.location});return w.useLayoutEffect(()=>i.listen(s),[i]),w.createElement(Hw,{basename:t,children:n,location:l.location,navigationType:l.action,navigator:i})}var Qd;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmitImpl="useSubmitImpl",e.UseFetcher="useFetcher"})(Qd||(Qd={}));var Gd;(function(e){e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(Gd||(Gd={}));const Qw="/lotr-logo.png";var xv={exports:{}};/*!
+ */function Kw(e){let{basename:t,children:n,window:r}=e,o=w.useRef();o.current==null&&(o.current=uw({window:r,v5Compat:!0}));let i=o.current,[l,s]=w.useState({action:i.action,location:i.location});return w.useLayoutEffect(()=>i.listen(s),[i]),w.createElement(Hw,{basename:t,children:n,location:l.location,navigationType:l.action,navigator:i})}var Qd;(function(e){e.UseScrollRestoration="useScrollRestoration",e.UseSubmitImpl="useSubmitImpl",e.UseFetcher="useFetcher"})(Qd||(Qd={}));var Gd;(function(e){e.UseFetchers="useFetchers",e.UseScrollRestoration="useScrollRestoration"})(Gd||(Gd={}));const Qw="/lotr-task/lotr-logo.png";var xv={exports:{}};/*!
 	Copyright (c) 2018 Jed Watson.
 	Licensed under the MIT License (MIT), see
 	http://jedwatson.github.io/classnames
