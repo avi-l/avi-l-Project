@@ -17,8 +17,19 @@
     const mainModule = isProduction ? '/lotr-task/assets/' : '/';
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = `${mainModule}index.js`;
+    script.src = isProduction ? findScriptPath('index-', '.js')
+        : '/index.js';
     document.body.appendChild(script);
+    function findScriptPath(prefix, extension) {
+        const scripts = document.getElementsByTagName('script');
+        for (let i = 0; i < scripts.length; i++) {
+          const src = scripts[i].getAttribute('src');
+          if (src && src.startsWith(prefix) && src.endsWith(extension)) {
+            return src;
+          }
+        }
+        return '';
+      }
   </script>
 </body>
 </html>
