@@ -12,26 +12,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <script type="module">
-    const isProduction = window.location.hostname === 'avi-l.github.io';
-    const mainModule = isProduction ? '/lotr-task/assets/' : '/';
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = isProduction ? findScriptPath('index-', '.js') : '/index.js';
-
-    script.onload = function () {
-      document.body.removeChild(this);
-    };
-
-    document.body.appendChild(script);
-
-    function findScriptPath(prefix, extension) {
-      const scripts = Array.from(document.getElementsByTagName('script'));
-      const indexScript = scripts.find((script) =>
-        script.src.includes(prefix) && script.src.endsWith(extension)
-      );
-      return indexScript ? indexScript.src : '';
-    }
-  </script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
