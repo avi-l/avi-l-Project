@@ -20,7 +20,7 @@
     script.src = isProduction ? findScriptPath('index-', '.js') : '/index.js';
 
     script.onload = function () {
-      document.body.removeChild(script);
+      document.body.removeChild(this);
     };
 
     document.body.appendChild(script);

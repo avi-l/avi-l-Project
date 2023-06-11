@@ -6,5 +6,11 @@ export default defineConfig({
   base: "/lotr-task/",
   build: {
     outDir: "docs",
+    assetsDir: "assets", // Specify the assets directory
+    rollupOptions: {
+      input: {
+        index: "/index.html",
+      },
+    },
   },
 });
