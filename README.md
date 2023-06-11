@@ -14,13 +14,13 @@ Make sure you have the following software installed on your machine:
 1. Clone the repository from GitHub:
 
 ```
-git clone https://github.com/avi-l/lotr-task
+git clone https://github.com/avi-l/avi-l-Project.git
 ```
 
 2. Navigate to the project directory:
 
 ```
-cd lotr-task
+cd avi-l-Project
 ```
 
 3. Install the project dependencies

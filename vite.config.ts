@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command !== "serve") {
-    config.base = "/lotr-task/";
+    config.base = "/avi-l-Project/";
   }
 
   return config;

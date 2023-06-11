@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://avi-l.github.io/lotr-task/",
+  "homepage": "https://avi-l.github.io/avi-l-Project/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

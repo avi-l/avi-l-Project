@@ -55,24 +55,3 @@ The `App` component serves as the entry point of the application and renders the
 ### Ellipsis
 
 - Text within the cards that overflows the available space should be truncated with an ellipsis.
-
-## Usage Example
-
-```jsx
-import { DisplayData, TopBar } from "./components";
-
-const App: React.FC = () => {
-  return (
-    <div className="h-screen w-screen bg-black d-flex flex-column">
-      <Router>
-        <TopBar />
-        <Routes>
-          <Route path="/" element={<DisplayData />} />
-        </Routes>
-      </Router>
-    </div>
-  );
-};
-
-export default App;
-```
