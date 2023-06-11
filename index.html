@@ -12,13 +12,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <script type="module">
-    import.meta.env.BASE_URL = '/'; // Set the base URL to root
-    const mainModule = import.meta.env.PROD ? '/assets/' : '/';
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = `${mainModule}index.js`;
-    document.body.appendChild(script);
-  </script>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
