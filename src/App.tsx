@@ -11,7 +11,7 @@ import DisplayData from "./components/DisplayData";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/lotr-task/"}>
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/avi-l-Project/"}>
       <div className="h-screen w-screen bg-black d-flex flex-column">
         <TopBar />
         <Routes>
