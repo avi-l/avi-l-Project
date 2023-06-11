@@ -18,21 +18,22 @@ const TopBar: React.FC = () => {
             <img width="180" src={LotrLogo} alt="Lotr logo" />
           </Navbar.Brand>
           <Nav className=" mr-20">
-            <ButtonGroup>
-              {data?.length > 0 && (
+            {data?.length > 0 && (
+              <ButtonGroup>
                 <Button variant="outline-warning" onClick={handleClearData}>
                   Delete All
                 </Button>
-              )}
-
-              <Button variant="outline-warning" onClick={handleFetchMore}>
-                {isLoading ? "Fetching " : " "}
-                {data?.length > 0 && "More "}
-                {dataType?.charAt(0).toUpperCase() +
-                  dataType?.substring(1) +
-                  "s"}
-              </Button>
-            </ButtonGroup>
+                {dataType !== "movie" && (
+                  <Button variant="outline-warning" onClick={handleFetchMore}>
+                    {isLoading ? "Fetching " : " "}
+                    {data?.length > 0 && "More "}
+                    {dataType?.charAt(0).toUpperCase() +
+                      dataType?.substring(1) +
+                      "s"}
+                  </Button>
+                )}
+              </ButtonGroup>
+            )}
           </Nav>
           <Nav className="mr-8">
             <DataTypeDropdown />

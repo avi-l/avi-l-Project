@@ -18,11 +18,18 @@ const DisplayData: React.FC = () => {
         <>
           <Container>
             <Row>
-              {data?.map((data: Movie | Character | Quote) => (
-                <Col lg={4} md={6} sm={12} key={data._id} className="p-1">
-                  <LotrCard {...data} />
-                </Col>
-              ))}
+              {data?.length === 0 ? (
+                <div className="text-yellow-500 flex justify-center h-full flex-col items-center pt-[200px]">
+                  <h2> Welcome to LOTRY</h2>{" "}
+                  <div>Select something from the dropdown!</div>
+                </div>
+              ) : (
+                data?.map((data: Movie | Character | Quote) => (
+                  <Col lg={4} md={6} sm={12} key={data._id} className="p-1">
+                    <LotrCard {...data} />
+                  </Col>
+                ))
+              )}
             </Row>
           </Container>
         </>

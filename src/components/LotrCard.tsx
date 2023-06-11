@@ -12,11 +12,7 @@ const LotrCard: React.FC<LotrCardProps> = (props) => {
 
   return (
     <Card bg="dark" className="text-yellow-500">
-      <Card.Img
-        src="default_lotr.jpg"
-        className="object-cover rounded cursor-pointer"
-      />
-
+      <Card.Img src="default_lotr.jpg" className="object-cover rounded" />
       <Card.Body>
         <ListGroup>
           {dataType === "movie" && (
