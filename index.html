@@ -18,6 +18,11 @@
     const script = document.createElement('script');
     script.type = 'module';
     script.src = isProduction ? findScriptPath('index-', '.js') : '/index.js';
+
+    script.onload = function () {
+      document.body.removeChild(script);
+    };
+
     document.body.appendChild(script);
 
     function findScriptPath(prefix, extension) {
