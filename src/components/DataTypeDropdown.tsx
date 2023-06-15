@@ -5,13 +5,23 @@ import { Dropdown } from "react-bootstrap";
 import { QueryOptions } from "../config/constants";
 import { IQueryTypes } from "../config/types";
 import { RootState } from "../dux/rootReducer";
-import { SET_DATA_TYPE } from "../dux/reducers";
+import { IS_LOADING_DATA, SET_DATA_TYPE } from "../dux/reducers";
+import { useEffect } from "react";
+import { useFetchData } from "../hooks/useFetchData";
 
 export const DataTypeDropdown: React.FC = () => {
   const dispatch = useDispatch();
   const dataType = useSelector((state: RootState) => state.dataType.dataType);
+  const { fetchData } = useFetchData();
+  useEffect(() => {
+    if (dataType) {
+      console.count("useEffect");
+      fetchData(1, 0);
+    }
+  }, [dataType]);
 
   const handleQueryTypeChange = (queryType: IQueryTypes) => {
+    dispatch({ type: IS_LOADING_DATA, payload: true });
     dispatch({ type: SET_DATA_TYPE, payload: queryType });
   };
 

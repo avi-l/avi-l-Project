@@ -8,7 +8,6 @@ import {
   ADD_DATA,
 } from "../dux/reducers";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import { RootState } from "../dux/rootReducer";
 
 export const useFetchData = () => {
@@ -44,10 +43,6 @@ export const useFetchData = () => {
   };
 
   const handleClearData = () => dispatch({ type: CLEAR_DATA });
-
-  useEffect(() => {
-    fetchData(1, 0);
-  }, [dataType]);
 
   return {
     data,

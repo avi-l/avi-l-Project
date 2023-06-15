@@ -7,6 +7,8 @@ const instance: AxiosInstance = axios.create({
     Accept: "application/json",
     Authorization: `Bearer ${lotr_key}`,
   },
+  // to use the backend api delete the above and uncomment this:
+  //  baseURL: "http://localhost:3000",
 });
 
 export default instance;
